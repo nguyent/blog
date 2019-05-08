@@ -1,3 +1,3 @@
 ## Blog
 
-- [Test](posts/test.md){:#hiatuspost}
+- [Hiatus](posts/Hiatus.md)
