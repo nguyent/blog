@@ -26,7 +26,7 @@ I took it upon myself to test, build, and deploy the entire ELK infrastructure o
 
 I refused to give up, partially because of a sunk cost fallacy, but also because I wanted to be perceived as valuable by providing a service to co-workers I respected. Despite the issues I pushed through the pain and eventually had the ELK stack successfully running end-to-end. 
 
-![histo](/Users/thang/Documents/musings/histo.png)
+![histo]({{ site.url }}/assets/histo.png)
 
 The first Kibana dashboard I made was a pretty stacked histogram showcasing user actions. This was put on display in our area of the office and naturally people walking by started asking what it was. I was extremely proud to show co-workers what I had done and eager for them to use it. I even led a department wide lunch and learn that was well received. I felt gratification once I started seeing Kibana used around the company without explicitly introducing it to those users. People were empowered to do their own ad-hoc analysis and create their own dashboards. 
 
@@ -40,7 +40,7 @@ When I received my offer I had to decide if I wanted to leave the state I spent 
 
 ### On Motivation and Moving on
 
-![autonomy-mastery-purpose](/Users/thang/Documents/musings/autonomy-mastery-purpose.jpg)
+![autonomy-mastery-purpose]({{ site.url }}/assets/autonomy-mastery-purpose.jpg)
 
 The above is a visualization of an [excellent Ted Talk](https://www.youtube.com/watch?v=rrkrvAUbU9Y) by Daniel Pink. The crux of the talk is that motivation is based on three concepts: Autonomy, Mastery, & Purpose. When all three are satisfied, motivation is plentiful. When any one of those is lacking, motivation wanes. I have adopted this system as a tool for introspection whenever I feel like I'm getting into a slump with anything I may be pursuing, not strictly just work.
 
@@ -50,7 +50,7 @@ I left Zipcar because I felt like the Times was an objectively more impactful pl
 
 My reasoning for joining the Times would ironically be the reason I left. I wanted to be somewhere I felt like my work mattered and made an impact. Something I didn't realize at the Times going in is the division between the Newsroom and the Business™. The Newsroom is naturally where the hard hitting, front-facing journalism work happens. The Business on the other hand was just that: the business side of things. I worked on the business side.
 
-![separation-of-church-and-state](/Users/thang/Documents/musings/separation-of-church-and-state.jpg)
+![separation-of-church-and-state]({{ site.url }}/assets/separation-of-church-and-state.jpg)
 
 My work was primarily providing data to analysts, engineers, or data scientists who would use the data in a novel way to tell a story that would produce business value. This included recommendations, personalizations, understanding user behavior, subscription starts & stops, etc. I often didn't even see how the data were being used by others, but I was certainly one of the first to know when they stopped receiving it. Our team was essentially a data conduit, which made sense given how our team was structured horizontally across the organization, but also meant that we weren't the ones making an impact with the data. 
 
@@ -60,7 +60,7 @@ I became disillusioned and lost my motivation to work. I realized that I was und
 
 ### Time after Times
 
-![bjj](/Users/thang/Documents/musings/bjj.jpg)
+![bjj]({{ site.url }}/assets/bjj.jpg)
 
 People often ask what I've been up to, and are pretty surprised when I say [nothing](https://www.nytimes.com/2019/04/29/smarter-living/the-case-for-doing-nothing.html). Nothing career related, but I was keeping busy: I volunteered at an animal shelter, trained several times a week, competed in some tournaments, read some books, fostered a dog, improved my culinary skills, but most importantly did a lot of self-reflection to understand what my personal needs are and what I want for my future. I realized that I need to be able to contribute observable value to others in order to feel connected to the company mission and ultimately my work. For me, the knowledge gained from this introspective journey is almost more important than what I actually did during my break from industry.
 
