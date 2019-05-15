@@ -1,4 +1,4 @@
 ## Posts
 
-- [Hiatus](posts/hashmap.md)
+- [Gotchas: Concurrent Execution and Maps in Java](posts/hashmap.md)
 - [Hiatus](posts/Hiatus.md)
