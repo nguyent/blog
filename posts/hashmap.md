@@ -5,7 +5,7 @@ Once upon a time, I was once tasked with building a streaming [Dataflow](https:/
 {:.center}
 ![conc-pipeline]({{ site.url }}/blog/assets/conc-pipeline.png)
 
-Data producers published messages containing a `schema_id` to Pub/Sub. Schemas would be resolved through a request to a Schema Registry (SR) to decode a message's `payload`. After decoding the data we could write it to a BigQuery.
+Data producers published messages containing a `schema_id` to Pub/Sub. Schemas would be resolved through a request to a Schema Registry (SR) to decode a message's `payload` and write it to BigQuery.
 
 ### Cache Me If You Can
 
