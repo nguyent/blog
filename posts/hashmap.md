@@ -115,11 +115,12 @@ What is the action is this scenario? Let's look at a code sample.
 ```
 <sub> Full code [here](https://github.com/nguyent/blog/blob/master/assets/code/concurrentTest.java) </sub>
 
-The code is fairly straightforward, we're 
+In the above code we are:
 - spawning an `Executor` with 10 threads 
 - submitting 15 `Callables` to the `ExecutorService`
-- Each `Callable` is attempting to update a single key on `ConcurrentHashMap` with `putIfAbsent` or `computeIfAbsent` depending on a runtime parameter we provide. 
-- The underlying `Callable`s have print statements so we can see how the threads interleave. The last line of the output is the value associated with the key.
+- Inside each `Callable` attempting to update a single key on `ConcurrentHashMap` with `putIfAbsent` or `computeIfAbsent` (depending on a runtime parameter)
+- The `Callables` contain print statements so we can observe execution behavior and how the threads interleave. 
+- The last line of the output is the value associated with the key we've set.
 
 Let's take a look at `putIfAbsent` first. 
 
@@ -167,11 +168,13 @@ executing...
 
 <sub>Truncating output again. </sub>
 
-Here we can see `executing…` printed multiple times, which means we're executing the `Callable` containing the  `computeIfAbsent` call, however we only see `starting` and `completing` once. This confirms we're only call the value function once, and that subsequent `computeIfAbsent` calls are blocked until the initial call has completed. Great success!
+Here we can see `executing…` printed multiple times, which means multiple `Callables` containing with the `computeIfAbsent` call are being processed concurrently, however we only see `starting` and `completing` once. This confirms we're only calling `getObjectIntegerFunction` once, and subsequent `computeIfAbsent` calls are blocked until the initial call has completed. Great success!
 
 ### Closing Notes
 
-This was a lot, and if you made it this far I commend you. While this approach worked for me, if your needs are slightly more complex you may want to look into using an external library such as Google's Guava [Cache](https://github.com/google/guava/wiki/CachesExplained), which behaves in a similar manner to `ConcurrentHashMap`. There are also a number of additional parameters/features which allow you to set time expiration policies, limit the cache size, add removal listeners, and more.
+This was a lot, and if you made it this far I commend you. While this approach worked for me, if your needs are slightly more complex you may want to look into using an external library such as Google's Guava [Cache](https://github.com/google/guava/wiki/CachesExplained), which behaves in a similar manner to `ConcurrentHashMap`. There are also a number of additional parameters/features which allow you to set time expiration policies, limit the cache size, add removal listeners, and more. 
+
+If you want to read more about concurrency in Java, I highly recommend [Java Concurrency in Practice](http://jcip.net/).
 
 If there's any lesson here, I implore you to read the documentation carefully. The additional effort will pay off dividends and save you time and headache down the road.
 
