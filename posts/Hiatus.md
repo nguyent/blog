@@ -1,6 +1,6 @@
 # Hiatus
 
-Hi, my name is Thang Nguyen and I'm 28 years old. I have been on hiatus since September from my position as a Data Engineer at The New York Times. This has naturally been a hot topic of discussion, for both friends and potential employers, so I decided to write a formal post on my reasoning for anyone interested in my [thought process](https://zenpencils.com/comic/128-bill-watterson-a-cartoonists-advice/). 
+Hi, my name is Thang Nguyen and I'm 28 years old. I have been on hiatus since September from my position as a Data Engineer at The New York Times. This has naturally been a hot topic of discussion, for both friends and potential employers, so I decided to write a formal post on my reasoning for anyone interested in my [thought process](https://zenpencils.com/comic/128-bill-watterson-a-cartoonists-advice/){:target="_blank"}. 
 
 ### Why did I leave the Times and decide to go on hiatus? 
 
@@ -35,7 +35,7 @@ I had accomplished my goal of providing value to the company. Now what?
 
 ### Path to the Times 
 
-The genesis of my foray into Data Engineering (DE) was borne from my work on the ELK stack and also my observation that DE work is capable of providing genuine tangible value to any organization. Data are irrefutable, the foundation for pivotal decisions, and I wanted to be the one to deliver it. I applied to and was accepted to the [Insight Data Engineering program](https://www.insightdataengineering.com/), built a [project](https://thangnguyen.us/insight) in 6 weeks, presented it to the Times, was subsequently invited to an onsite, and received an offer shortly thereafter. 
+The genesis of my foray into Data Engineering (DE) was borne from my work on the ELK stack and also my observation that DE work is capable of providing genuine tangible value to any organization. Data are irrefutable, the foundation for pivotal decisions, and I wanted to be the one to deliver it. I applied to and was accepted to the [Insight Data Engineering program](https://www.insightdataengineering.com/){:target="_blank"}, built a [project](https://thangnguyen.us/insight){:target="_blank"} in 6 weeks, presented it to the Times, was subsequently invited to an onsite, and received an offer shortly thereafter. 
 
 When I received my offer I had to decide if I wanted to leave the state I spent my entire life in, where my family lived, break my lease, and move to a completely new city where I only knew a handful of people. I knew it would be hard, but I felt like I needed to do it. I opted to make the move, partially out of existential fear, but also because I wanted to be a part of an organization that I truly believed would make the world a better place. I actually had a higher competing offer, but turned it down to be at the Times, because the mission was more important to me than money.
 
@@ -44,7 +44,7 @@ When I received my offer I had to decide if I wanted to leave the state I spent 
 {:.center}
 ![autonomy-mastery-purpose]({{ site.url }}/blog/assets/autonomy-mastery-purpose.jpg)
 
-The above is a visualization of an [excellent Ted Talk](https://www.youtube.com/watch?v=rrkrvAUbU9Y) by Daniel Pink. The crux of the talk is that motivation is based on three concepts: Autonomy, Mastery, & Purpose. When all three are satisfied, motivation is plentiful. When any one of those is lacking, motivation wanes. I have adopted this system as a tool for introspection whenever I feel like I'm getting into a slump with anything I may be pursuing, not strictly just work.
+The above is a visualization of an [excellent Ted Talk](https://www.youtube.com/watch?v=rrkrvAUbU9Y){:target="_blank"} by Daniel Pink. The crux of the talk is that motivation is based on three concepts: Autonomy, Mastery, & Purpose. When all three are satisfied, motivation is plentiful. When any one of those is lacking, motivation wanes. I have adopted this system as a tool for introspection whenever I feel like I'm getting into a slump with anything I may be pursuing, not strictly just work.
 
 I left Zipcar because I felt like the Times was an objectively more impactful place to work, thus satisfying my desire for purpose, while also subverting whatever purpose I felt at Zipcar. Autonomy and mastery were implied, as it was a new environment to be in and I had much to learn. Now back to the original question...
 
@@ -59,14 +59,14 @@ My work was primarily providing data to analysts, engineers, or data scientists 
 
 Once I came to this realization, I increasingly felt more and more divorced from the value the Times was providing to the world through journalism. Sure, one could argue my work played a part in generating more revenue for the company, which in turn would allow it to continue to function and grow. I even told myself that for a while, but it wasn't enough to keep me going. 
 
-I became disillusioned and lost my motivation to work. I realized that I was undergoing an [identity crisis](https://www.huffpost.com/entry/self-identity_b_1128731) of sorts, my identity was tied to my career, which I had conflated with the value the Times was producing. With my connection lost, I began to feel myself getting burnt out. I was undergoing an existential crisis. I needed a change of pace and some time away from industry to clear my head. I took a hiatus to pursue my main hobby, Brazilian Jiu-Jitsu, full-time. 
+I became disillusioned and lost my motivation to work. I realized that I was undergoing an [identity crisis](https://www.huffpost.com/entry/self-identity_b_1128731){:target="_blank"} of sorts, my identity was tied to my career, which I had conflated with the value the Times was producing. With my connection lost, I began to feel myself getting burnt out. I was undergoing an existential crisis. I needed a change of pace and some time away from industry to clear my head. I took a hiatus to pursue my main hobby, Brazilian Jiu-Jitsu, full-time. 
 
 ### Time after Times
 
 {:.center}
 ![bjj]({{ site.url }}/blog/assets/bjj.jpg)
 
-People often ask what I've been up to, and are pretty surprised when I say [nothing](https://www.nytimes.com/2019/04/29/smarter-living/the-case-for-doing-nothing.html). Nothing career related, but I was keeping busy: I volunteered at an animal shelter, trained several times a week, competed in some tournaments, read some books, fostered a dog, improved my culinary skills, but most importantly did a lot of self-reflection to understand what my personal needs are and what I want for my future. I realized that I need to be able to contribute observable value to others in order to feel connected to the company mission and ultimately my work. For me, the knowledge gained from this introspective journey is almost more important than what I actually did during my break from industry.
+People often ask what I've been up to, and are pretty surprised when I say [nothing](https://www.nytimes.com/2019/04/29/smarter-living/the-case-for-doing-nothing.html){:target="_blank"}. Nothing career related, but I was keeping busy: I volunteered at an animal shelter, trained several times a week, competed in some tournaments, read some books, fostered a dog, improved my culinary skills, but most importantly did a lot of self-reflection to understand what my personal needs are and what I want for my future. I realized that I need to be able to contribute observable value to others in order to feel connected to the company mission and ultimately my work. For me, the knowledge gained from this introspective journey is almost more important than what I actually did during my break from industry.
 
 I loved my time at the Times, the people I met, and the experience I gained, but when I was no longer emotionally invested in my work I knew I needed a break. Though I wasn't honing my technical skills, I feel like I gained significant personal insight into who I am as a person and what motivates me. I am also confident this newly found wisdom will grant me long term satisfaction that I can take with me anywhere, and that alone has made my hiatus worthwhile.
 
