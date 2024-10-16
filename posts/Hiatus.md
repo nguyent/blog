@@ -1,4 +1,4 @@
-# Hiatus
+# (2019) Hiatus
 
 Hi, my name is Thang Nguyen and I'm 28 years old. I have been on hiatus since September from my position as a Data Engineer at The New York Times. This has naturally been a hot topic of discussion, for both friends and potential employers, so I decided to write a formal post on my reasoning for anyone interested in my [thought process](https://zenpencils.com/comic/128-bill-watterson-a-cartoonists-advice/){:target="_blank"}. 
 
