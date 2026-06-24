@@ -1,3 +1,8 @@
+---
+layout: default
+title: "(2024) Extending pytest mocks"
+---
+
 # (2024) Extending pytest mocks
 
 IMHO, tests (+ code in general) should read cleanly and minimize cognitive load.

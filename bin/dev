@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+unset LDFLAGS CPPFLAGS
+export PATH="$HOME/.rubies/ruby-3.4.9/bin:$PATH"
+
+find_free_port() {
+  ruby -rsocket -e '
+    port = Integer(ARGV.fetch(0))
+
+    loop do
+      TCPServer.open("127.0.0.1", port) do
+        puts port
+        exit
+      end
+    rescue Errno::EADDRINUSE, Errno::EACCES
+      port += 1
+    end
+  ' "$1"
+}
+
+port="${PORT:-$(find_free_port 4000)}"
+livereload_port="${LIVERELOAD_PORT:-$(find_free_port 35729)}"
+
+echo "Serving blog at http://127.0.0.1:${port}/blog/"
+echo "LiveReload port: ${livereload_port}"
+
+exec bundle exec jekyll serve \
+  --livereload \
+  --livereload-port "$livereload_port" \
+  --host 127.0.0.1 \
+  --port "$port" \
+  --baseurl /blog

@@ -1,2 +1,19 @@
 theme: jekyll-theme-minimal
 markdown: kramdown
+baseurl: /blog
+plugins:
+  - jekyll-seo-tag
+sass:
+  quiet_deps: true
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - bin
+  - vendor

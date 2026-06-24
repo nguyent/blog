@@ -8,7 +8,65 @@
   text-align: center;
 }
 
+.blog-shell {
+  max-width: 800px;
+}
+
+.blog-shell--with-sidebar {
+  align-items: flex-start;
+  display: flex;
+  gap: 32px;
+  max-width: 1080px;
+}
+
+.blog-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.post-sidebar {
+  border-right: 1px solid #d8d8d8;
+  flex: 0 0 220px;
+  padding-right: 18px;
+  position: sticky;
+  top: 24px;
+}
+
+.post-sidebar h3 {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.post-sidebar__link {
+  color: #494949;
+  display: block;
+  font-size: 14px;
+  line-height: 1.35;
+  margin: 0 0 12px;
+}
+
+.post-sidebar__link--active {
+  color: #222;
+  font-weight: 700;
+}
+
 code {
   white-space: pre-wrap;
   word-break: break-word;
+}
+
+@media only screen and (max-width : 960px) {
+  .blog-shell--with-sidebar {
+    display: block;
+    max-width: 800px;
+  }
+
+  .post-sidebar {
+    border-bottom: 1px solid #d8d8d8;
+    border-right: 0;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    padding-right: 0;
+    position: static;
+  }
 }

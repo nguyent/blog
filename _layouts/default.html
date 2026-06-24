@@ -19,11 +19,41 @@
     <div style="position: fixed; opacity: .8 " class="mobile-hide">
       <h2> Thang's Blog </h2>
     </div>    
+    {% assign is_post_page = false %}
+    {% if page.path contains "posts/" %}
+      {% assign is_post_page = true %}
+    {% endif %}
+    {% assign is_index_page = false %}
+    {% if page.url == "/" %}
+      {% assign is_index_page = true %}
+    {% endif %}
+    {% assign uses_sidebar_layout = false %}
+    {% if is_post_page or is_index_page %}
+      {% assign uses_sidebar_layout = true %}
+    {% endif %}
     <div class="wrapper">
-      <div style="max-width: 800px">
+      <div class="blog-shell{% if uses_sidebar_layout %} blog-shell--with-sidebar{% endif %}">
+      {% if uses_sidebar_layout %}
+        <aside class="post-sidebar" aria-label="Blog posts">
+          <h3>Posts</h3>
+          <nav>
+            {% for post in site.data.posts %}
+              <a
+                class="post-sidebar__link{% if page.url == post.url %} post-sidebar__link--active{% endif %}"
+                href="{{ post.url | relative_url }}"
+              >
+                {{ post.title }}
+              </a>
+            {% endfor %}
+          </nav>
+        </aside>
+      {% endif %}
+      <main class="blog-content">
+      {% if is_post_page %}
 
       {{ content }}
-
+      {% endif %}
+      </main>
       </div>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
