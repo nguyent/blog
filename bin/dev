@@ -23,13 +23,22 @@ find_free_port() {
 
 port="${PORT:-$(find_free_port 4000)}"
 livereload_port="${LIVERELOAD_PORT:-$(find_free_port 35729)}"
+baseurl="${BASEURL:-}"
 
-echo "Serving blog at http://127.0.0.1:${port}/blog/"
+echo "Serving site at http://127.0.0.1:${port}${baseurl}/"
 echo "LiveReload port: ${livereload_port}"
 
-exec bundle exec jekyll serve \
-  --livereload \
-  --livereload-port "$livereload_port" \
-  --host 127.0.0.1 \
-  --port "$port" \
-  --baseurl /blog
+if [[ -n "$baseurl" ]]; then
+  exec bundle exec jekyll serve \
+    --livereload \
+    --livereload-port "$livereload_port" \
+    --host 127.0.0.1 \
+    --port "$port" \
+    --baseurl "$baseurl"
+else
+  exec bundle exec jekyll serve \
+    --livereload \
+    --livereload-port "$livereload_port" \
+    --host 127.0.0.1 \
+    --port "$port"
+fi

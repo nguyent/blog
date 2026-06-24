@@ -8,7 +8,7 @@ title: "(2019) Gotchas: Concurrent Execution and Maps in Java"
 Once upon a time, I was tasked with building a streaming [Dataflow](https://cloud.google.com/dataflow/) pipeline that looked something like this:
 
 {:.center}
-![conc-pipeline]({{ site.url }}/blog/assets/conc-pipeline.png)
+![conc-pipeline]({{ "/assets/conc-pipeline.png" | relative_url }})
 
 Data producers published messages containing a `schema_id` to Pub/Sub. Schemas would be resolved through a request to a Schema Registry (SR) to decode a message's `payload` and write it to BigQuery.
 
@@ -21,7 +21,7 @@ There's an issue with this approach. This only works under a single-threaded exe
 We could utilize the `synchronized` keyword to acquire the [intrinsic lock](https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html) associated with each Java object, granting  exclusive access to the caller (thread). In a multi-threaded environment, the first thread would acquire the lock and subsequent threads would have their execution blocked until the first thread completed their work and released the lock. In essence, by using `synchronized` in this manner we're forcing execution to occur in a single-threaded mode in order to gain thread-safety.
 
 {:.center}
-![conc-1]({{ site.url }}/blog/assets/conc-1.png)
+![conc-1]({{ "/assets/conc-1.png" | relative_url }})
 
 <sub>[source](https://www.youtube.com/watch?v=ddceop8tAm4)</sub>
 
@@ -40,7 +40,7 @@ While in this particular scenario, the latency from a cold-start wasn't necessar
 Lucky for us Java's `ConcurrentHashMap` allows for multiple concurrent reads/updates by utilizing a technique known as [lock-striping](https://netjs.blogspot.com/2016/05/lock-striping-in-java-concurrency.html). The `synchronized` keyword locks the _entire_ `HashMap` (and thus all keys), while lock-striping provides a more granular approach by using multiple locks. This makes it possible to modify multiple keys at once on a single map thus mitigating contention.
 
 {:.center}
-![conc-2]({{ site.url }}/blog/assets/conc-2.png)
+![conc-2]({{ "/assets/conc-2.png" | relative_url }})
 
 <sub>[source](https://www.youtube.com/watch?v=ddceop8tAm4)</sub>
 

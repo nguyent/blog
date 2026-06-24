@@ -1,34 +1,42 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}" style="background: url('/blog/assets/concrete_seamless.png')">
+<html lang="{{ site.lang | default: "en-US" }}">
   <head>
-  <title>An adequate blog</title>    
+  <title>{{ page.title | default: site.title }}</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 {% seo %}
     
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <link rel="stylesheet" href="/blog/assets/css/custom.css">
-    <!--[if lt IE 9]>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
   </head>
-  <body style="background: url('/blog/assets/concrete_seamless.png')">
+  <body class="{% if page.home %}home-page{% else %}blog-page{% endif %}">
     {% assign is_post_page = false %}
     {% if page.path contains "posts/" %}
       {% assign is_post_page = true %}
     {% endif %}
-    {% assign is_index_page = false %}
-    {% if page.url == "/" %}
-      {% assign is_index_page = true %}
-    {% endif %}
     {% assign uses_sidebar_layout = false %}
-    {% if is_post_page or is_index_page %}
+    {% if is_post_page or page.blog_index %}
       {% assign uses_sidebar_layout = true %}
     {% endif %}
-    <div class="">
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="site-nav__brand" href="{{ "/" | relative_url }}" aria-label="Home">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M3 10.8 12 3l9 7.8v9.7h-6v-6h-6v6H3z"/>
+        </svg>
+      </a>
+      <div class="site-nav__links">
+        <a href="{{ "/blog/" | relative_url }}">Blog</a>
+        <a href="{{ "/Nguyen.Thang-Resume.pdf" | relative_url }}" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </nav>
+
+    {% if page.home %}
+      <main class="site-main">
+        {{ content }}
+      </main>
+    {% else %}
       <div class="blog-shell{% if uses_sidebar_layout %} blog-shell--with-sidebar{% endif %}">
       {% if uses_sidebar_layout %}
         <aside class="post-sidebar" aria-label="Blog posts">
@@ -46,18 +54,9 @@
         </aside>
       {% endif %}
       <main class="blog-content">
-      {% if is_post_page %}
-
-      {{ content }}
-      {% endif %}
+        {{ content }}
       </main>
       </div>
-    </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    <script>
-      window.onload = function(event) {
-        window.parent.postMessage(window.location.href, '*');
-      };
-    </script>
+    {% endif %}
   </body>
 </html>

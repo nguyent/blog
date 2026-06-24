@@ -1,6 +1,8 @@
-theme: jekyll-theme-minimal
+title: Thang Nguyen
+description: Personal Website
+theme: null
 markdown: kramdown
-baseurl: /blog
+baseurl: ""
 plugins:
   - jekyll-seo-tag
 sass:
